@@ -16,12 +16,12 @@ database:'phonebook'
      console.log('DB connection failed ');
   });
 
-
+app.set('port', (process.env.PORT || 5000));
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.static(__dirname + "/public"))
 
 app.get('/', function (req,res) {
-  res.sendFile('/index.html');
+  res.sendFile('/index.html');F
 });
 
 app.get('/readAll', function (req,res) {
@@ -62,6 +62,8 @@ app.post('/saveOne', function (req,res) {
   res.end();
 });
 
-app.listen(3000, function () {
-  console.log('Listening port 3000!');
+
+
+app.listen(5000, function () {
+  console.log('Listening port 5000!');
 })
