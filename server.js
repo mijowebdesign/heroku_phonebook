@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.static(__dirname + "/public"))
 
 app.get('/', function (req,res) {
-  res.sendFile('/index.html');F
+  res.sendFile('/index.html');
 });
 
 app.get('/readAll', function (req,res) {
